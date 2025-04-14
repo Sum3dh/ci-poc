@@ -1,0 +1,26 @@
+name: Simple Manual Test Workflow
+
+on:
+  workflow_dispatch:  # Enables manual triggering from the GitHub UI
+
+jobs:
+  test:
+    name: Run Basic Shell Commands
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print Hello
+        run: echo "👋 Hello from GitHub Actions!"
+
+      - name: adding sleep
+        run: sleep 30s
+
+      - name: Show system info
+        run: |
+          echo "System Info:"
+          uname -a
+          echo "Date:"
+          date
