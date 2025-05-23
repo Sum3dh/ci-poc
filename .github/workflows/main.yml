@@ -16,7 +16,7 @@ jobs:
         run: echo "👋 Hello from GitHub Actions!"
 
       - name: adding sleep
-        run: sleep 30s
+        run: sleep 10s
 
       - name: Show system info
         run: |
